@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Cold Storage Services (Contact)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        }
+
+        .hero-pattern {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation with Language Toggle -->
+    <nav class="gradient-bg text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./logo.png" alt="CSS Logo" class="h-12 w-12 mr-4 rounded-full" />
+                <span class="text-2xl font-bold">Cold Storage Services</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition">About Us</a>
+                <a href="services.html" class="hover:text-gray-200 transition">Services</a>
+                <a href="contact.html" class="hover:text-gray-200 transition">Contact</a>
+                <select id="language-toggle" class="bg-blue-800 text-white p-2 rounded">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Contact Us" data-hi="संपर्क करें"
+                data-te="సంప్రదించండి" data-ne="सम्पर्क गर्नुहोस्" data-kn="ಸಂಪರ್ಕಿಸಿ" data-ta="தொடர்பு கொள்ளுங்கள்">
+                Contact Us
+            </h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto"
+                data-en="Get in touch with our team today to learn more about our cold storage solutions."
+                data-hi="हमारी कोल्ड स्टोरेज सेवाओं के बारे में अधिक जानने के लिए आज ही हमारी टीम से संपर्क करें।"
+                data-te="మా శీతల నిల్వ పరిష్కారాల గురించి మరింత తెలుసుకోవడానికి నేడు మా బృందాన్ని సంప్రదించండి."
+                data-ne="हाम्रा शीत भण्डारण समाधानहरूका बारेमा थप जान्न आजै हाम्रो टोलीलाई सम्पर्क गर्नुहोस्।"
+                data-kn="ನಮ್ಮ ಶೀತಲ ಶೇಖರಣಾ ಪರಿಹಾರಗಳ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳಲು ಇಂದು ನಮ್ಮ ತಂಡವನ್ನು ಸಂಪರ್ಕಿಸಿ."
+                data-ta="எங்கள் குளிர் சேமிப்பு தீர்வுகளைப் பற்றி மேலும் அறிய இன்றே எங்கள் அணியைத் தொடர்பு கொள்ளுங்கள்.">
+                Get in touch with our team today to learn more about our cold storage solutions.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content: Contact Form -->
+    <main class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-4" data-en="We'd Love to Hear from You"
+                data-hi="हमें आपकी प्रतिक्रिया का इंतजार है" data-te="మేము మీ నుండి విన్నేందుకు ఆసక్తిగా ఉన్నాము"
+                data-ne="हामी तपाईंको विचार सुन्न चाहन्छौं" data-kn="ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಕೇಳಲು ನಾವು ಇಚ್ಛಿಸುತ್ತೇವೆ"
+                data-ta="உங்களிடமிருந்து நாங்கள் கேட்க விரும்புகிறோம்">
+                We'd Love to Hear from You
+            </h2>
+            <form class="max-w-xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-4 border border-gray-300 rounded"
+                        placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-4 border border-gray-300 rounded"
+                        placeholder="Your Email" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="5" class="w-full p-4 border border-gray-300 rounded"
+                        placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white p-4 rounded hover:bg-blue-700 transition"
+                    data-en="Send Message" data-hi="संदेश भेजें" data-te="సందేశాన్ని పంపండి" data-ne="सन्देश पठाउनुहोस्"
+                    data-kn="ಸಂದೇಶ ಕಳುಹಿಸಿ" data-ta="செய்தியை அனுப்பு">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p data-en="© 2025 CSS - Cold Storage Services. All Rights Reserved."
+                data-hi="© 2025 CSS - कोल्ड स्टोरेज सेवाएं। सभी अधिकार सुरक्षित।"
+                data-te="© 2025 CSS - కోల్డ్ స్టోరేజ్ సేవలు. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి."
+                data-ne="© 2025 CSS - शीत भण्डारण सेवाहरू। सबै अधिकार सुरक्षित।"
+                data-kn="© 2025 CSS - ಶೀತಲ ಶೇಖರಣಾ ಸೇವೆಗಳು। ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+                data-ta="© 2025 CSS - குளிர் சேமிப்பு சேவைகள். அனைத்தும் உரிமை பாதுகாப்பில் உள்ளது.">
+                © 2025 CSS - Cold Storage Services. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Language Persistence Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const languageToggle = document.getElementById("language-toggle");
+            const storedLanguage = localStorage.getItem("selectedLanguage") || "en";
+            languageToggle.value = storedLanguage;
+            languageToggle.addEventListener("change", function () {
+                localStorage.setItem("selectedLanguage", this.value);
+                applyTranslations(this.value);
+            });
+            function applyTranslations(lang) {
+                const elements = document.querySelectorAll("[data-" + lang + "]");
+                elements.forEach(el => {
+                    if (el.hasAttribute("data-" + lang)) { el.textContent = el.getAttribute("data-" + lang); }
+                    if (el.tagName === "INPUT" && el.hasAttribute("data-" + lang + "-placeholder")) { el.placeholder = el.getAttribute("data-" + lang + "-placeholder"); }
+                });
+            }
+            applyTranslations(storedLanguage);
+        });
+    </script>
+</body>
+
+</html>

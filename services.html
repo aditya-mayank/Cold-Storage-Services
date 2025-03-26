@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Cold Storage Services (Services)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        }
+
+        .hero-pattern {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation with Language Toggle -->
+    <nav class="gradient-bg text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./logo.png" alt="CSS Logo" class="h-12 w-12 mr-4 rounded-full" />
+                <span class="text-2xl font-bold">Cold Storage Services</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition">About Us</a>
+                <a href="services.html" class="hover:text-gray-200 transition">Services</a>
+                <a href="contact.html" class="hover:text-gray-200 transition">Contact</a>
+                <select id="language-toggle" class="bg-blue-800 text-white p-2 rounded">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Our Services" data-hi="हमारी सेवाएं"
+                data-te="మా సేవలు" data-ne="हाम्रा सेवाहरू" data-kn="ನಮ್ಮ ಸೇವೆಗಳು" data-ta="எங்கள் சேவைகள்">
+                Our Services
+            </h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto"
+                data-en="We offer comprehensive cold storage solutions for modern agriculture, including temperature control, smart tracking, and total protection."
+                data-hi="हम आधुनिक कृषि के लिए व्यापक कोल्ड स्टोरेज समाधान प्रदान करते हैं, जिनमें तापमान नियंत्रण, स्मार्ट ट्रैकिंग और पूर्ण सुरक्षा शामिल हैं।"
+                data-te="మా సేవలు ఆధునిక వ్యవసాయానికి ఉష్ణోగ్రత నియంత్రణ, స్మార్ట్ ట్రాకింగ్ మరియు సంపూర్ణ సంరక్షణతో కూడినవి."
+                data-ne="हामी आधुनिक कृषिका लागि व्यापक शीत भण्डारण समाधान प्रदान गर्दछौं, जसमा तापक्रम नियन्त्रण, स्मार्ट ट्र्याकिङ र पूर्ण संरक्षण समावेश छन्।"
+                data-kn="ನಾವು ಆಧುನಿಕ ಕೃಷಿಗಾಗಿ ಸಂಪೂರ್ಣ ಶೀತಲ ಶೇಖರಣಾ ಪರಿಹಾರಗಳನ್ನು ನೀಡುತ್ತೇವೆ, ಉದಾಹರಣೆಗೆ ಉಷ್ಣಾಂಶ ನಿಯಂತ್ರಣ, ಸ್ಮಾರ್ಟ್ ಟ್ರ್ಯಾಕಿಂಗ್ ಮತ್ತು ಸಂಪೂರ್ಣ ಸಂರಕ್ಷಣೆ."
+                data-ta="நாம் நவீன வேளாண்மைக்கு முழுமையான குளிர் சேமிப்பு தீர்வுகளை வழங்குகிறோம், அதில் வெப்பநிலை கட்டுப்பாடு, ஸ்மார்ட் ட்ராகிங் மற்றும் மொத்த பாதுகாப்பு ஆகியவை அடங்கும்.">
+                We offer comprehensive cold storage solutions for modern agriculture, including temperature control,
+                smart tracking, and total protection.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content: Service Cards -->
+    <main class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <i class="fas fa-temperature-low text-5xl text-blue-600 mb-6 block text-center"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-center" data-en="Temperature Control"
+                        data-hi="तापमान नियंत्रण" data-te="సాంద్ర నియంత్రణ" data-ne="तापक्रम नियन्त्रण"
+                        data-kn="ಉಷ್ಣಾಂಶ ನಿಯಂತ್ರಣ" data-ta="வெப்பநிலை கட்டுப்பாடு">
+                        Temperature Control
+                    </h3>
+                    <p class="text-gray-600 text-center"
+                        data-en="Advanced cooling systems maintaining optimal temperature for different produce types."
+                        data-hi="विभिन्न उत्पाद प्रकारों के लिए इष्टतम तापमान बनाए रखने वाली उन्नत शीतलन प्रणालियां।"
+                        data-te="వివిధ ఉత్పత్తుల రకాల కోసం ఆప్తమైన ఉష్ణోగ్రత నిర్వహణతో కూడిన శీతలీకరణ వ్యవస్థలు."
+                        data-ne="विभिन्न उत्पादनका लागि अनुकूल तापक्रम कायम राख्ने विकसित शीतलन प्रणाली।"
+                        data-kn="ವಿವಿಧ ಬೆಳೆ ಪ್ರಕಾರಗಳಿಗೆ ಅನುಕೂಲ ಉಷ್ಣಾಂಶವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳುವ ಅಭಿವೃದ್ಧಿ ಶೀತಲ ವ್ಯವಸ್ಥೆಗಳು."
+                        data-ta="வெவ்வேறு பயிர் வகைகளுக்கான இணக்கமான வெப்பநிலையை பராமரிக்கும் மேம்பட்ட குளிரூட்டல் முறைகள்">
+                        Advanced cooling systems maintaining optimal temperature for different produce types.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <i class="fas fa-chart-line text-5xl text-blue-600 mb-6 block text-center"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-center" data-en="Smart Tracking"
+                        data-hi="स्मार्ट ट्रैकिंग" data-te="స్మార్ట్ ట్రాకింగ్" data-ne="स्मार्ट ट्र्याकिङ"
+                        data-kn="ಸ್ಮಾರ್ಟ್ ಟ್ರ್ಯಾಕಿಂಗ್" data-ta="தெளிவுத் தடமறிதல்">
+                        Smart Tracking
+                    </h3>
+                    <p class="text-gray-600 text-center"
+                        data-en="Real-time inventory monitoring and predictive analytics for your stored goods."
+                        data-hi="आपकी संग्रहित वस्तुओं के लिए रीयल-टाइम इन्वेंटरी निगरानी और पूर्वानुमान विश्लेषण।"
+                        data-te="మీ నిల్వ చేసిన సరుకుల కోసం రియల్-టైము సూచీ నిఘా మరియు అంచనా విశ్లేషణ."
+                        data-ne="तपाईंको संग्रहित सामानको लागि वास्तविक समयको सूची अनुगमन र पूर्वानुमान विश्लेषण।"
+                        data-kn="ನಿಮ್ಮ ಶೇಖರಿಸಿದ ಸರಕಿನ ಮೇಲೆ ವಾಸ್ತವಿಕ ಸಮಯದ ಸೂಚೀ ಮೇಲ್ವಿಚಾರಣೆ ಮತ್ತು ಮುನ್ಸೂಚನಾ ವಿಶ್ಲೇಷಣೆ."
+                        data-ta="உங்கள் சேமிக்கப்பட்ட பொருட்களுக்கான நேரடி சரக்கு கண்காணிப்பு மற்றும் முன்மொழியும் பகுப்பாய்வு">
+                        Real-time inventory monitoring and predictive analytics for your stored goods.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-100 p-8 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <i class="fas fa-shield-alt text-5xl text-blue-600 mb-6 block text-center"></i>
+                    <h3 class="text-2xl font-semibold mb-4 text-center" data-en="Total Protection" data-hi="कुल सुरक्षा"
+                        data-te="మొత్తం సంరక్షణ" data-ne="कुल संरक्षण" data-kn="ಸಂಪೂರ್ಣ ಸಂರಕ್ಷಣೆ"
+                        data-ta="மொத்த பாதுகாப்பு">
+                        Total Protection
+                    </h3>
+                    <p class="text-gray-600 text-center"
+                        data-en="Comprehensive security and quality maintenance for your agricultural produce."
+                        data-hi="आपके कृषि उत्पादों के लिए व्यापक सुरक्षा और गुणवत्ता रखरखाव।"
+                        data-te="మీ వ్యవసాయ ఉత్పత్తుల కోసం సమగ్ర सुरक्षా మరియు నాణ్యత నిర్వహణ."
+                        data-ne="तपाईंको कृषि उत्पादनको लागि व्यापक सुरक्षा र गुणस्तर मर्यादा।"
+                        data-kn="ನಿಮ್ಮ ಕೃಷಿ ಉತ್ಪನ್ನಗಳಿಗಾಗಿ ಸಮಗ್ರ ಸಂರಕ್ಷಣೆ ಮತ್ತು ಗುಣಮಟ್ಟ ನಿರ್ವಹಣೆ."
+                        data-ta="உங்கள் வேளாண் பொருட்களுக்கான மொத்த பாதுகாப்பு மற்றும் தரம் பராமரிப்பு">
+                        Comprehensive security and quality maintenance for your agricultural produce.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p data-en="© 2025 CSS - Cold Storage Services. All Rights Reserved."
+                data-hi="© 2025 CSS - कोल्ड स्टोरेज सेवाएं। सभी अधिकार सुरक्षित।"
+                data-te="© 2025 CSS - కోల్డ్ స్టోరేజ్ సేవలు. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి."
+                data-ne="© 2025 CSS - शीत भण्डारण सेवाहरू। सबै अधिकार सुरक्षित।"
+                data-kn="© 2025 CSS - ಶೀತಲ ಶೇಖರಣಾ ಸೇವೆಗಳು। ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+                data-ta="© 2025 CSS - குளிர் சேமிப்பு சேவைகள். அனைத்தும் உரிமை பாதுகாப்பில் உள்ளது.">
+                © 2025 CSS - Cold Storage Services. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Language Persistence Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const languageToggle = document.getElementById("language-toggle");
+            const storedLanguage = localStorage.getItem("selectedLanguage") || "en";
+            languageToggle.value = storedLanguage;
+            languageToggle.addEventListener("change", function () {
+                localStorage.setItem("selectedLanguage", this.value);
+                applyTranslations(this.value);
+            });
+            function applyTranslations(lang) {
+                const elements = document.querySelectorAll("[data-" + lang + "]");
+                elements.forEach(el => {
+                    if (el.hasAttribute("data-" + lang)) {
+                        el.textContent = el.getAttribute("data-" + lang);
+                    }
+                    if (el.tagName === "INPUT" && el.hasAttribute("data-" + lang + "-placeholder")) {
+                        el.placeholder = el.getAttribute("data-" + lang + "-placeholder");
+                    }
+                });
+            }
+            applyTranslations(storedLanguage);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Cold Storage Services (Search Demo)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        }
+
+        .hero-pattern {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation with Language Toggle -->
+    <nav class="gradient-bg text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./logo.png" alt="CSS Logo" class="h-12 w-12 mr-4 rounded-full" />
+                <span class="text-2xl font-bold">Cold Storage Services</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition" data-en="Home" data-hi="होम"
+                    data-te="నివాసం" data-ne="घर" data-kn="ಮೂಲ ಪುಟ" data-ta="முகப்பு">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition" data-en="About Us" data-hi="हमारे बारे में"
+                    data-te="మా గురించి" data-ne="हाम्रो बारेमा" data-kn="ನಮ್ಮ ಬಗ್ಗೆ" data-ta="எங்கள் பற்றி">About
+                    Us</a>
+                <a href="services.html" class="hover:text-gray-200 transition" data-en="Services" data-hi="सेवाएं"
+                    data-te="సేవలు" data-ne="सेवाहरू" data-kn="ಸೇವೆಗಳು" data-ta="சேவைகள்">Services</a>
+                <a href="contact.html" class="hover:text-gray-200 transition" data-en="Contact" data-hi="संपर्क"
+                    data-te="సంప్రదింపు" data-ne="सम्पर्क" data-kn="ಸಂಪರ್ಕ" data-ta="தொடர்பு">Contact</a>
+                <select id="language-toggle" class="bg-blue-800 text-white p-2 rounded">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <header class="hero-pattern text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Search Cold Storages" data-hi="कोल्ड स्टोरेज खोजें"
+                data-te="కోల్డ్ స్టోరేజీలను శోధించండి" data-ne="कोल्ड स्टोरेज खोज्नुहोस्"
+                data-kn="ಕೋಲ್ಡ್ ಸ್ಟೋರೆಜ್ ಹುಡುಕಿ" data-ta="குளிர் சேமிப்பை தேடுங்கள்">
+                Search Cold Storages
+            </h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto"
+                data-en="Enter any location or storage name to see available cold storages."
+                data-hi="उपलब्ध कोल्ड स्टोरेज देखने के लिए कोई भी स्थान या स्टोरेज नाम दर्ज करें।"
+                data-te="అందుబాటులో ఉన్న స్టోరేజీలను చూడటానికి ఏమైనా ప్రాంతం లేదా స్టోరేజ్ పేరు నమోదు చేయండి"
+                data-ne="उपलब्ध कोल्ड स्टोरेजहरू हेर्न कुनै स्थान वा स्टोरेज नाम प्रविष्ट गर्नुहोस्"
+                data-kn="ಲಭ್ಯವಿರುವ ಕೋಲ್ಡ್ ಸ್ಟೋರೆಜ್‌ಗಳನ್ನು ನೋಡಲು ಯಾವುದೇ ಸ್ಥಳ ಅಥವಾ ಸ್ಟೋರೆಜ್ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
+                data-ta="கிடைக்கும் குளிர் சேமிப்புகளைப் பார்க்க எந்த இடத்தையும் அல்லது சேமிப்பு பெயரை உள்ளிடவும்">
+                Enter any location or storage name to see available cold storages.
+            </p>
+            <div class="max-w-xl mx-auto">
+                <div class="flex">
+                    <input id="search-input" type="text" placeholder="Search for a location..."
+                        data-en-placeholder="Search for a location..." data-hi-placeholder="एक स्थान खोजें..."
+                        data-te-placeholder="ఒక ప్రాంతం శోధించండి..." data-ne-placeholder="एक स्थान खोज्नुहोस्..."
+                        data-kn-placeholder="ಒಂದು ಸ್ಥಳ ಹುಡುಕಿ..." data-ta-placeholder="ஒரு இடத்தைத் தேடுங்கள்..."
+                        class="w-full p-4 text-gray-900 rounded-l-lg">
+                    <button id="search-button"
+                        class="bg-blue-600 text-white px-8 rounded-r-lg hover:bg-blue-700 transition" data-en="Search"
+                        data-hi="खोजें" data-te="శోధించండి" data-ne="खोज्नुहोस्" data-kn="ಹುಡುಕಿ" data-ta="தேடு">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Results Section (initially hidden) -->
+    <section class="py-16 bg-white hidden" id="results-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8" data-en="Search Results" data-hi="खोज परिणाम"
+                data-te="ఫలితాలు" data-ne="खोज परिणामहरू" data-kn="ಫಲಿತಾಂಶಗಳು" data-ta="தேடல் முடிவுகள்">
+                Search Results
+            </h2>
+            <ul id="results-list" class="list-disc list-inside space-y-2 text-gray-700"></ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p data-en="© 2025 CSS - Cold Storage Services. All Rights Reserved."
+                data-hi="© 2025 CSS - कोल्ड स्टोरेज सेवाएं। सभी अधिकार सुरक्षित।"
+                data-te="© 2025 CSS - కోల్డ్ స్టోరేజ్ సేవలు. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి."
+                data-ne="© 2025 CSS - शीत भण्डारण सेवाहरू। सबै अधिकार सुरक्षित।"
+                data-kn="© 2025 CSS - ಶೀತಲ ಶೇಖರಣಾ ಸೇವೆಗಳು। ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+                data-ta="© 2025 CSS - குளிர் சேமிப்பு சேவைகள். அனைத்தும் உரிமை பாதுகாப்பில் உள்ளது.">
+                © 2025 CSS - Cold Storage Services. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Combined Script for Search and Language Persistence -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Language Persistence
+            const languageToggle = document.getElementById("language-toggle");
+            const storedLanguage = localStorage.getItem("selectedLanguage") || "en";
+            languageToggle.value = storedLanguage;
+            languageToggle.addEventListener("change", function () {
+                localStorage.setItem("selectedLanguage", this.value);
+                applyTranslations(this.value);
+            });
+            function applyTranslations(lang) {
+                const elements = document.querySelectorAll("[data-" + lang + "]");
+                elements.forEach(el => {
+                    if (el.hasAttribute("data-" + lang)) {
+                        el.textContent = el.getAttribute("data-" + lang);
+                    }
+                    if (el.tagName === "INPUT" && el.hasAttribute("data-" + lang + "-placeholder")) {
+                        el.placeholder = el.getAttribute("data-" + lang + "-placeholder");
+                    }
+                });
+            }
+            applyTranslations(storedLanguage);
+
+            // Sample Data
+            const coldStorages = [
+                { id: "gubba-telangana", name: "Gubba Cold Storage", location: "Telangana" },
+                { id: "warangal-a", name: "Warangal Cold Storage A", location: "Warangal" },
+                { id: "warangal-b", name: "Warangal Cold Storage B", location: "Warangal" },
+                { id: "hyd-1", name: "Hyderabad Cold Storage 1", location: "Hyderabad" },
+                { id: "hyd-2", name: "Hyderabad Cold Storage 2", location: "Hyderabad" },
+                { id: "blr-alpha", name: "Bangalore Cold Store Alpha", location: "Bangalore" },
+                { id: "blr-beta", name: "Bangalore Cold Store Beta", location: "Bangalore" }
+            ];
+
+            const searchButton = document.getElementById("search-button");
+            const searchInput = document.getElementById("search-input");
+            const resultsSection = document.getElementById("results-section");
+            const resultsList = document.getElementById("results-list");
+
+            function displayResults(results) {
+                resultsList.innerHTML = "";
+                results.forEach(item => {
+                    const li = document.createElement("li");
+                    const link = document.createElement("a");
+                    // Link to details.html with query parameters for id, location, and name
+                    link.href = `details.html?id=${encodeURIComponent(item.id)}&location=${encodeURIComponent(item.location)}&name=${encodeURIComponent(item.name)}`;
+                    link.classList.add("text-blue-600", "hover:underline");
+                    link.textContent = `${item.name} (${item.location})`;
+                    li.appendChild(link);
+                    resultsList.appendChild(li);
+                });
+                resultsSection.classList.remove("hidden");
+            }
+
+            function performSearch(query) {
+                if (!query) {
+                    displayResults(coldStorages);
+                    return;
+                }
+                const lowerQuery = query.toLowerCase();
+                const filtered = coldStorages.filter(item =>
+                    item.location.toLowerCase().includes(lowerQuery) ||
+                    item.name.toLowerCase().includes(lowerQuery)
+                );
+                if (filtered.length > 0) {
+                    displayResults(filtered);
+                } else {
+                    resultsList.innerHTML = "";
+                    const li = document.createElement("li");
+                    li.textContent = `No cold storages found for "${query}".`;
+                    resultsList.appendChild(li);
+                    resultsSection.classList.remove("hidden");
+                }
+            }
+
+            searchInput.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    performSearch(searchInput.value.trim());
+                }
+            });
+
+            searchButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                performSearch(searchInput.value.trim());
+            });
+
+            // Check for query parameter in URL and perform search if available.
+            const params = new URLSearchParams(window.location.search);
+            const queryParam = params.get("query");
+            if (queryParam) {
+                searchInput.value = queryParam;
+                performSearch(queryParam);
+            } else {
+                performSearch("");
+            }
+        });
+    </script>
+</body>
+
+</html>

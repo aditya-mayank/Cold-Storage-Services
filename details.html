@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Cold Storage Services (Sensors Info)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        }
+
+        .hero-pattern {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation with Language Toggle -->
+    <nav class="gradient-bg text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./logo.png" alt="CSS Logo" class="h-12 w-12 mr-4 rounded-full" />
+                <span class="text-2xl font-bold">Cold Storage Services</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="hover:text-gray-200 transition" data-en="Home" data-hi="होम"
+                    data-te="నివాసం" data-ne="घर" data-kn="ಮೂಲ ಪುಟ" data-ta="முகப்பு">Home</a>
+                <a href="about.html" class="hover:text-gray-200 transition" data-en="About Us" data-hi="हमारे बारे में"
+                    data-te="మా గురించి" data-ne="हाम्रो बारेमा" data-kn="ನಮ್ಮ ಬಗ್ಗೆ" data-ta="எங்கள் பற்றி">About
+                    Us</a>
+                <a href="services.html" class="hover:text-gray-200 transition" data-en="Services" data-hi="सेवाएं"
+                    data-te="సేవలు" data-ne="सेवाहरू" data-kn="ಸೇವೆಗಳು" data-ta="சேவைகள்">Services</a>
+                <a href="contact.html" class="hover:text-gray-200 transition" data-en="Contact" data-hi="संपर्क"
+                    data-te="సంప్రదింపు" data-ne="सम्पर्क" data-kn="ಸಂಪರ್ಕ" data-ta="தொடர்பு">Contact</a>
+                <select id="language-toggle" class="bg-blue-800 text-white p-2 rounded">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="py-10 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold mb-4" data-en="Sensors Information" data-hi="सेंसर जानकारी"
+                data-te="సెన్సర్లు సమాచారం" data-ne="सेंसर जानकारी" data-kn="ಸೆನ್ಸರ್ ಮಾಹಿತಿ" data-ta="சென்சார் தகவல்">
+                Sensors Information
+            </h1>
+            <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+                <p class="text-lg">
+                    <strong data-en="Location:" data-hi="स्थान:" data-te="ప్రదేశం:" data-ne="स्थान:" data-kn="ಸ್ಥಳ:"
+                        data-ta="இடம்:">Location:</strong>
+                    <span id="location-name" class="text-gray-700">[Location Placeholder]</span>
+                </p>
+                <p class="text-lg">
+                    <strong data-en="Cold Storage Selected:" data-hi="चयनित कोल्ड स्टोरेज:"
+                        data-te="ఎంచుకున్న స్టోరేజ్:" data-ne="चयनित कोल्ड स्टोरेज:"
+                        data-kn="ಆಯ್ಕೆಮಾಡಿದ ಕೋಲ್ಡ್ ಸ್ಟೋರೆಜ್:" data-ta="தேர்ந்தெடுக்கப்பட்ட குளிர் சேமிப்பு:">Cold
+                        Storage Selected:</strong>
+                    <span id="coldstorage-name" class="text-gray-700">[Cold Storage Name]</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="py-10 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-4" data-en="Sensors Available" data-hi="उपलब्ध सेंसर"
+                    data-te="అందుబాటులో ఉన్న సెన్సర్లు" data-ne="उपलब्ध सेंसरहरू" data-kn="ಲಭ್ಯವಿರುವ ಸೆನ್ಸರ್‌ಗಳು"
+                    data-ta="கிடைக்கும் சென்சார்கள்">
+                    Sensors Available
+                </h2>
+                <p class="mb-6"
+                    data-en="Here all the sensors that are fixed in the location will be mentioned along with their output. If any sensor is damaged, it will be informed in this section."
+                    data-hi="यहाँ स्थान में स्थापित सभी सेंसर और उनके आउटपुट का उल्लेख किया जाएगा। यदि कोई सेंसर क्षतिग्रस्त है, तो इसे इस अनुभाग में सूचित किया जाएगा।"
+                    data-te="ఇక్కడ, ప్రదేశంలో స్థాపించబడిన అన్ని సెన్సర్లు మరియు వాటి అవుట్‌పుట్‌ను చూపిస్తారు. ఏ సెన్సర్ దెబ్బతిన్నట్లయితే, అది ఈ విభాగంలో తెలియజేస్తారు."
+                    data-ne="यहाँ स्थानमा स्थापन भएका सबै सेन्सरहरू र तिनका आउटपुटहरू उल्लेख गरिनेछ। यदि कुनै सेन्सर बिग्रेको छ भने, यसलाई यो खण्डमा सूचित गरिनेछ।"
+                    data-kn="ಇಲ್ಲಿ ಸ್ಥಳದಲ್ಲಿ ಸ್ಥಾಪಿತವಾಗಿರುವ ಎಲ್ಲಾ ಸೆನ್ಸರ್‌ಗಳು ಮತ್ತು ಅವುಗಳ ಔಟ್‌ಪುಟ್ ಅನ್ನು ತಿಳಿಸಲಾಗುತ್ತದೆ. ಯಾವುದೇ ಸೆನ್ಸರ್ ಹಾನಿಯಾಗಿದ್ದರೆ, ಅದನ್ನು ಈ ವಿಭಾಗದಲ್ಲಿ ತಿಳಿಸಲಾಗುತ್ತದೆ."
+                    data-ta="இங்கே இடத்தில் நிறுவப்பட்ட அனைத்து சென்சார்கள் மற்றும் அவற்றின் வெளியீடுகள் குறிப்பிடப்படும். எந்த சென்சாரும் சேதமடைந்திருந்தால், அதை இந்த பகுதியில் அறிவிக்கப்படும்.">
+                    Here all the sensors that are fixed in the location will be mentioned along with their output. If
+                    any sensor is damaged, it will be informed in this section.
+                </p>
+                <ul id="sensors-available" class="list-disc list-inside space-y-2 text-gray-700"></ul>
+            </div>
+        </section>
+        <section class="py-10 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-4" data-en="Sensors Lacking" data-hi="गायब सेंसर"
+                    data-te="లేకపోయిన సెన్సర్లు" data-ne="अभाव भएका सेन्सरहरू" data-kn="ಕಳೆದುಹೋಗಿರುವ ಸೆನ್ಸರ್‌ಗಳು"
+                    data-ta="இல்லாத சென்சார்கள்">
+                    Sensors Lacking
+                </h2>
+                <p class="mb-6"
+                    data-en="Here all the sensors that are lacking will be mentioned. Through this, the government will easily know the cold storage lacking the respective sensors."
+                    data-hi="यहाँ उन सभी सेंसर का उल्लेख किया जाएगा जो गायब हैं। इससे सरकार को आसानी से पता चल सकेगा कि किस कोल्ड स्टोरेज में कौन से सेंसर नहीं हैं।"
+                    data-te="ఇక్కడ, అందుబాటులో లేని సెన్సర్లు చూపిస్తారు. దీని ద్వారా ప్రభుత్వం ఏ స్టోరేజీలో ఏ సెన్సర్లు లేవో సులభంగా తెలుసుకుంటుంది."
+                    data-ne="यहाँ अभाव भएका सबै सेन्सरहरूको उल्लेख गरिनेछ। यसले सरकारले सजिलै थाहा पाउनेछ कि कुन कोल्ड स्टोरेजमा कुन सेन्सरहरू छैनन्।"
+                    data-kn="ಇಲ್ಲಿ ಕಳೆದುಹೋಗಿರುವ ಸೆನ್ಸರ್‌ಗಳನ್ನು ವಿವರಿಸಲಾಗುತ್ತದೆ. ಇದರಿಂದ ಸರ್ಕಾರಕ್ಕೆ ಯಾವ ಕೋಲ್ಡ್ ಸ್ಟೋರೆಜ್‌ನಲ್ಲಿ ಯಾವ ಸೆನ್ಸರ್ ಇಲ್ಲ ಎಂದು ತಿಳಿಯುತ್ತದೆ."
+                    data-ta="இங்கே இல்லாத சென்சார்கள் குறிப்பிடப்படும். இதன் மூலம் அரசு எளிதாக எந்த குளிர் சேமிப்பில் எந்த சென்சார்கள் இல்லையென அறிவிக்க முடியும்.">
+                    Here all the sensors that are lacking will be mentioned. Through this, the government will easily
+                    know the cold storage lacking the respective sensors.
+                </p>
+                <ul id="sensors-lacking" class="list-disc list-inside space-y-2 text-gray-700"></ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p data-en="© 2025 CSS - Cold Storage Services. All Rights Reserved."
+                data-hi="© 2025 CSS - कोल्ड स्टोरेज सेवाएं। सभी अधिकार सुरक्षित।"
+                data-te="© 2025 CSS - కోల్డ్ స్టోరేజ్ సేవలు. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి."
+                data-ne="© 2025 CSS - शीत भण्डारण सेवाहरू। सबै अधिकार सुरक्षित।"
+                data-kn="© 2025 CSS - ಶೀತಲ ಶೇಖರಣಾ ಸೇವೆಗಳು। ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+                data-ta="© 2025 CSS - குளிர் சேமிப்பு சேவைகள். அனைத்தும் உரிமை பாதுகாப்பில் உள்ளது.">
+                © 2025 CSS - Cold Storage Services. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Combined Script for Sensor Data and Language Persistence -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Read URL parameters for location and cold storage name
+            const params = new URLSearchParams(window.location.search);
+            const locationParam = params.get("location") || "N/A";
+            const nameParam = params.get("name") || "N/A";
+            document.getElementById("location-name").textContent = locationParam;
+            document.getElementById("coldstorage-name").textContent = nameParam;
+
+            // Sample sensor data for demonstration
+            const sensorsAvailable = [
+                "Temperature Sensor — Status: OK",
+                "Humidity Sensor — Status: OK",
+                "Gas Leak Detector — Status: Damaged"
+            ];
+            const sensorsLacking = [
+                "Door Ajar Sensor — Not Installed",
+                "Water Leak Sensor — Not Installed"
+            ];
+            const availableList = document.getElementById("sensors-available");
+            sensorsAvailable.forEach(sensor => {
+                const li = document.createElement("li");
+                li.textContent = sensor;
+                availableList.appendChild(li);
+            });
+            const lackingList = document.getElementById("sensors-lacking");
+            sensorsLacking.forEach(sensor => {
+                const li = document.createElement("li");
+                li.textContent = sensor;
+                lackingList.appendChild(li);
+            });
+
+            // Language Persistence
+            const languageToggle = document.getElementById("language-toggle");
+            const storedLanguage = localStorage.getItem("selectedLanguage") || "en";
+            languageToggle.value = storedLanguage;
+            languageToggle.addEventListener("change", function () {
+                localStorage.setItem("selectedLanguage", this.value);
+                applyTranslations(this.value);
+            });
+            function applyTranslations(lang) {
+                const elements = document.querySelectorAll("[data-" + lang + "]");
+                elements.forEach(el => {
+                    if (el.hasAttribute("data-" + lang)) {
+                        el.textContent = el.getAttribute("data-" + lang);
+                    }
+                    if (el.tagName === "INPUT" && el.hasAttribute("data-" + lang + "-placeholder")) {
+                        el.placeholder = el.getAttribute("data-" + lang + "-placeholder");
+                    }
+                });
+            }
+            applyTranslations(storedLanguage);
+        });
+    </script>
+</body>
+
+</html>
